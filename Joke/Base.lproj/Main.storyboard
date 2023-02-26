@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Joke" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqc-vj-rm7">
+                                <rect key="frame" x="180" y="390" width="54" height="27"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="pushRefreshButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vmQ-tx-SLt"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ors-Ic-Sd1">
+                                <rect key="frame" x="9.5" y="114" width="395" height="216"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Push &quot;Refresh&quot; button" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dXw-db-NZG">
+                                        <rect key="frame" x="10" y="22" width="375" height="172"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="0zL-e4-DsP"/>
+                                    <constraint firstItem="dXw-db-NZG" firstAttribute="centerX" secondItem="Ors-Ic-Sd1" secondAttribute="centerX" id="Fce-u7-6nL"/>
+                                    <constraint firstAttribute="bottom" secondItem="dXw-db-NZG" secondAttribute="bottom" constant="21" id="Hv2-8J-2Fa"/>
+                                    <constraint firstItem="dXw-db-NZG" firstAttribute="leading" secondItem="ZL1-dJ-jdO" secondAttribute="leading" constant="10" id="YHs-Pp-CyM"/>
+                                    <constraint firstItem="dXw-db-NZG" firstAttribute="centerY" secondItem="Ors-Ic-Sd1" secondAttribute="centerY" id="js4-dn-q1H"/>
+                                    <constraint firstItem="dXw-db-NZG" firstAttribute="top" secondItem="ZL1-dJ-jdO" secondAttribute="top" constant="22" id="k47-9b-qaG"/>
+                                    <constraint firstAttribute="trailing" secondItem="dXw-db-NZG" secondAttribute="trailing" constant="10" id="otX-G7-he8"/>
+                                    <constraint firstAttribute="width" constant="395" id="usx-gM-Sle"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="k5G-aJ-YhU"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="ZL1-dJ-jdO"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yqc-vj-rm7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="180" id="62a-oT-4IU"/>
+                            <constraint firstItem="Ors-Ic-Sd1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="Av8-L0-Lf9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yqc-vj-rm7" secondAttribute="bottom" constant="445" id="P7Y-3m-Vc0"/>
+                            <constraint firstItem="Ors-Ic-Sd1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QNs-iK-pjg"/>
+                            <constraint firstItem="yqc-vj-rm7" firstAttribute="top" secondItem="Ors-Ic-Sd1" secondAttribute="bottom" constant="60" id="b0h-bp-VHR"/>
+                            <constraint firstItem="Ors-Ic-Sd1" firstAttribute="centerX" secondItem="yqc-vj-rm7" secondAttribute="centerX" id="lNk-gk-IBY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textViewJoke" destination="dXw-db-NZG" id="QOH-Hc-lZg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
